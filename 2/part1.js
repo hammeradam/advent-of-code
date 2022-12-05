@@ -17,13 +17,13 @@ const OUTCOMES = {
 };
 
 console.log(
-    require("fs")
-        .readFileSync("input.txt")
+    require('fs')
+        .readFileSync('input.txt')
         .toString()
-        .split("\n")
+        .split('\n')
         .reduce(
             (total, [enemy, _, me]) =>
-                total + -(87 - me.charCodeAt(0)) + OUTCOMES[enemy][me],
+                total - (87 - me.charCodeAt(0)) + OUTCOMES[enemy][me],
             0
         )
 );
