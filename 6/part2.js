@@ -8,7 +8,6 @@ while (!marker) {
     const seq = new Set(signal.slice(i - MARKER_LENGTH, i));
 
     if (seq.size === MARKER_LENGTH) {
-        console.log(seq);
         marker = i;
     }
 
